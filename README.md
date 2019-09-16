@@ -9,7 +9,7 @@
 <?php
 
 class Config {
-	private const FEDEX_API = "https://discordapp.com/api/webhooks/621402327286415370/sfxlIKB_0RFr24RhzExKoE6nnqA-DC3ifcq9OcwQWm8l2cz6LlvOJR6Oxi_OLFNUNM6K";
+	private const FEDEX_API = 'REPLACE_ME';
 
 	public static function getFedexApi() {
 		return self::FEDEX_API;
