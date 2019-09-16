@@ -1,11 +1,11 @@
 <?php
 
 namespace Model\Courier;
+use \Config as Config;
 
 class FedEx extends DefaultCourier {
 
 	const COURIER_NAME = COURIER_FEDEX;
-	const COURIER_API = "https://discordapp.com/api/webhooks/621402327286415370/sfxlIKB_0RFr24RhzExKoE6nnqA-DC3ifcq9OcwQWm8l2cz6LlvOJR6Oxi_OLFNUNM6K";
 
 	protected static $arrIDs = [];
 	private static $intOrders = 0;
@@ -25,7 +25,7 @@ class FedEx extends DefaultCourier {
 		parent::send(); // log the ids for this courier
 
 		// initialise curl request
-		$newCurl = curl_init(self::COURIER_API);
+		$newCurl = curl_init(Config::getFedexApi());
 
 		$arrPostData = [
 			"content" => json_encode(self::$arrIDs)
