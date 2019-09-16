@@ -6,10 +6,9 @@ const COURIER_ROYALMAIL = "RoyalMail";
 include_once('includes.php');
 
 use \Model\Batch as ModelBatch;
-use \Model\Consignment as ModelConsignment;
 
 // start a new batch with or without consignments already
-$objBatch = new ModelBatch([
+$modelBatch = new ModelBatch([
 	[
 		"Address" => "123 Testing Road",
 		"Courier" => COURIER_ROYALMAIL,
@@ -37,7 +36,7 @@ $objBatch = new ModelBatch([
 ]);
 
 // When a Consignment is added
-$objBatch->add([
+$modelBatch->add([
 	"Address" => "387 Testing Road",
 	"Courier" => COURIER_ROYALMAIL,
 	"Email" => "me@benhirst.co.uk",
@@ -45,7 +44,7 @@ $objBatch->add([
 ]);
 
 // When the batch ends, send it
-$objBatch->send();
+$modelBatch->send();
 
 
 ?>
