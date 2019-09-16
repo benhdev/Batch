@@ -1,8 +1,8 @@
 # Batch Project
 
 ### Usage
-1. `config.php` needs to be created in the root of this project `/`
-2. `config.php` should look like the following;
+- `config.php` needs to be created in the root of this project `/`
+- `config.php` should look like the following;
 
 ```php
 <?php
